@@ -1,4 +1,4 @@
-import query from "@/app/db"
+import query from "@/app/db/verceldb"
 
 export async function POST(req, res) {
     // Handle GET request here
