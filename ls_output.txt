@@ -1,0 +1,18 @@
+total 16
+drwxrwxrwx 1 root root  512 Mar 21 19:10 .
+drwxr-xr-x 1 root root 4096 Mar 21 18:36 ..
+-rwxrwxrwx 1 root root   40 Mar 20 15:59 .eslintrc.json
+drwxrwxrwx 1 root root  512 Mar 20 16:00 .git
+-rwxrwxrwx 1 root root  391 Mar 20 15:59 .gitignore
+drwxrwxrwx 1 root root  512 Mar 21 13:26 .next
+-rwxrwxrwx 1 root root  459 Mar 21 19:15 Dockerfile
+-rwxrwxrwx 1 root root 1382 Mar 20 15:59 README.md
+drwxrwxrwx 1 root root  512 Mar 21 16:30 app
+-rwxrwxrwx 1 root root  847 Mar 21 18:40 docker-compose.yaml
+-rwxrwxrwx 1 root root   73 Mar 20 16:00 jsconfig.json
+-rw-r--r-- 1 root root    0 Mar 21 19:18 ls_output.txt
+-rwxrwxrwx 1 root root   92 Mar 20 15:59 next.config.mjs
+-rwxrwxrwx 1 root root  491 Mar 21 13:44 package.json
+-rwxrwxrwx 1 root root   83 Mar 20 15:59 postcss.config.js
+drwxrwxrwx 1 root root  512 Mar 20 16:00 public
+-rwxrwxrwx 1 root root  469 Mar 20 15:59 tailwind.config.js

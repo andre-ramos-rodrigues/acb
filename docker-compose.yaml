@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:13    # Use PostgreSQL 13 image
+    environment:
+      #POSTGRES_DB: acb
+      #POSTGRES_USER: postgres
+      #POSTGRES_PASSWORD: '90210'
+      POSTGRES_DATABASE: verceldb
+      POSTGRES_USER: default
+      POSTGRES_PASSWORD: 'xuDKrkeb3l2z'
+    ports:
+      - '5432:5432'        # Map port 5432 on host to port 5432 on container
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .   # Path to your Next.js backend code
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'        # Map port 3000 on host to port 3000 on container
+    environment:
+      #- DATABASE_URL=postgresql://postgres:90210@db:5432/acb   # Change this to your database URL
+      - DATABASE_URL=postgresql://postgres://default:xuDKrkeb3l2z@ep-late-base-a4v2n29k.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require
+    depends_on:
+      - db
+    volumes:
+      - .:/app      # Mount the ./app directory on the host to /app directory in the container
+
+volumes:
+  postgres-data:
