@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from 'next/link'
+import TestCon from './TestCon'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
               <Link href="/" className="text-neutral-700 font-light font-roboto">Sobre mim</Link>
               <Link href="/" className="text-neutral-700 font-light font-roboto">A Clínica</Link>
               <Link href="/" className="text-neutral-700 font-light font-roboto">Blog</Link>
+              <TestCon />
               </div>
               <div>
                 <Link href="/candidatos" className="bg-gray-700 font-roboto font-light text-gray-200 px-6 py-2 rounded-xl">Contato</Link>

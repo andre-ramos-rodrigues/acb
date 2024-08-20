@@ -50,7 +50,7 @@ const [succ,setSucc] = useState({
 
     try {
       console.log(formData.nome)
-      const response = await fetch(`http://localhost:3000/api/novocandidato`, {
+      const response = await fetch(`/api/novocandidato`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', // Specify the content type as JSON
