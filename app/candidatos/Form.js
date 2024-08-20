@@ -10,7 +10,12 @@ const [formData, setFormData] = useState({
 nome: "",idade: "",bairro: "", profissao: "", jafez: "", telefone: "", email: "", 
 comosoube: "", pronome: ""
 });
-
+const [err,setErr] = useState({
+  msg: "", isOn: false
+})
+const [succ,setSucc] = useState({
+  msg: "", isOn: false
+})
   const router = useRouter()
 
   const handleChange = (event) => {
@@ -21,14 +26,31 @@ comosoube: "", pronome: ""
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(formData)
+    setErr({
+      isOn: false,
+      msg: ""
+    })
     //const response = await axios.get('http://localhost:3000/api/hello');
-    /*const response = await axios.get('http://localhost:3000/api/testconnection');
+    /*const response = await axios.get('http://localhost:3000/api/testconnection'); 
     console.log(response.data)
     return response.data*/
+    // http://localhost:3000/api/novocandidato
+
+    if(formData.nome === '' || formData.telefone === '' || formData.email === ''){
+      console.log('preencha os dados obrigatórios')
+
+      setErr({
+        isOn: true,
+        msg: "Os seguintes campos são obrigatórios: nome, telefone e email"
+      })
+
+      return
+    }
+
 
     try {
       console.log(formData.nome)
-      const response = await fetch('http://localhost:3000/api/novocandidato', {
+      const response = await fetch('../api/novocandidato', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json', // Specify the content type as JSON
@@ -42,12 +64,17 @@ comosoube: "", pronome: ""
           telefone: formData.telefone,
           email: formData.email,
           comosoube: formData.comosoube,
-          pronome: formData.pronome
+          pronome: formData.pronome,
+          atendimento: formData.atendimento
         }), // Convert data to JSON format
     });
 
           if (response.ok) {
             // Handle successful response
+            setSucc({
+              msg: "Mensagem enviada com sucesso",
+              isOn: true
+            })
             const responseData = await response.json();
             console.log(responseData);
             router.push('/', { scroll: false })
@@ -66,7 +93,7 @@ comosoube: "", pronome: ""
     <main className='items-center'>
         <form onSubmit={handleSubmit} action='' method='post' className='flex flex-col gap-7 bg-gray-600 text-white p-6 rounded-md items-center my-5 mx-7'>
             <div className='flex justify-between gap-5'>
-            <label htmlFor="nome"> Nome </label> 
+            <label htmlFor="nome"> Nome* </label> 
             <input className='text-black' value={formData.nome} onChange={handleChange} type="text" id="nome" name="nome"></input>
             </div>
 
@@ -81,12 +108,12 @@ comosoube: "", pronome: ""
             </div>
 
             <div className='flex justify-between gap-5'>
-            <label htmlFor="telefone"> Telefone de contato / whatsapp </label> 
+            <label htmlFor="telefone"> Telefone de contato / whatsapp* </label> 
             <input className='text-black' value={formData.telefone} onChange={handleChange} type="text" id="telefone" name="telefone"></input>
             </div>
 
             <div className='flex justify-between gap-5'>
-            <label htmlFor="email"> Email </label> 
+            <label htmlFor="email"> Email* </label> 
             <input className='text-black' value={formData.email} onChange={handleChange} type="text" id="email" name="email"></input>
             </div>
 
@@ -123,10 +150,26 @@ comosoube: "", pronome: ""
             <label htmlFor="outro">Outro</label><br></br>            
             </div>
 
+            <div className='flex gap-5'>
+            <label htmlFor="atendimento"> Preferência de atendimento </label> 
+            <input value="Online" onChange={handleChange} type="radio" id="Online" name="atendimento" />
+            <label htmlFor="Online">Online</label><br></br>    
+            <input value="Tijuca" onChange={handleChange} type="radio" id="Tijuca" name="atendimento" />
+            <label htmlFor="Tijuca">Tijuca - presencial</label><br></br>
+            <input value="Botafogo" onChange={handleChange} type="radio" id="Botafogo" name="atendimento"/>
+            <label htmlFor="Botafogo">Botafogo - presencial</label><br></br>   
+            </div>
+
             {/*<div className='p-2 bg-blue-300 cursor-pointer rounded-md font-semibold' onClick={() => handleSubmit()}>Salvar</div>*/}
             <button className='p-2 bg-neutral-300 text-neutral-700 font-semibold font-roboto cursor-pointer rounded-md ' type="submit">Enviar</button>
 
         </form>
+          {
+            succ && <div className='font-semibold text-green-600 self-center align-center text-center w-[100%]'>{succ.msg}</div>
+           }
+           {
+            err && <div className='font-semibold text-red-600 self-center align-center text-center w-[100%]'>{err.msg}</div>
+           }
     </main>
   )
 }

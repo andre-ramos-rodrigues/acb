@@ -35,21 +35,22 @@ export async function POST(req, res) {
                 telefone VARCHAR(100),
                 comosoube VARCHAR(300),
                 pronome VARCHAR(100),
+                atendimento VARCHAR(300),
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         `;
-    const { nome, idade, bairro, email, jafez, telefone, comosoube, pronome} = data;
+    const { nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento} = data;
     
     /*const insertQuery = `
                 INSERT INTO Candidatos (nome, endereco, bairro, cpf, sexo, nascimento, nomeresponsavel, cpfresponsavel, parentesco, escolaridade, profissional)
                 VALUES (${nome}, ${endereco}, ${bairro}, ${cpf}, ${sexo}, ${nascimento}, ${nomeresponsavel}, ${cpfresponsavel}, ${parentesco}, ${escolaridade}, ${profissional})
             `;*/
             
-            const values = [nome, idade, bairro, email, jafez, telefone, comosoube, pronome];
+            const values = [nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento];
             //const values = ['Fabio', 'rua X', 'Copacabana', '123', 'masculino', '11/11/2011', 'Maicon', '1234', 'pai', 'nenhuma', 'profissional autonomo'];
             const insertQuery = `
-            INSERT INTO Candidatos (nome, idade, bairro, email, jafez, telefone, comosoube, pronome)
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
+            INSERT INTO Candidatos (nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
             `;
             const getCandidatos = `
             SELECT * FROM candidatos WHERE email = '${email}';
