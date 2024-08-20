@@ -7,7 +7,7 @@ const TestCon = () => {
     const test = async() => {
 
         try {  
-          const response = await fetch('app/api/getcandidatos', {
+          const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getcandidatos`, {
             method: 'GET'
           })
 
