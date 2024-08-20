@@ -1,6 +1,18 @@
-export function GET(req, res) {
+export async function  GET(req, res) {
   // Handle GET request here
- return new Response( JSON.stringify({ message: 'GET request received' }) ,{ status:200 } )
+  console.log('trying hello endpoint!')
+
+  const getCandidatos = `
+  SELECT * FROM candidatos
+  `
+  try {
+      const {rows} = await query(getCandidatos)
+      return new Response( JSON.stringify({ rows }) ,{ status:200 } )
+
+  } catch(err) { 
+      return new Response( JSON.stringify({ error: 'DB' }) ,{ status:500 } )
+  }
+
 }
 
 export function POST(req, res) {

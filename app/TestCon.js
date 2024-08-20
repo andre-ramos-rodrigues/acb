@@ -7,7 +7,7 @@ const TestCon = () => {
     const test = async() => {
 
         try {  
-          const response = await fetch('/api/hello', {
+          const response = await fetch('/api/getcandidatos', {
             method: 'GET'
           })
 
