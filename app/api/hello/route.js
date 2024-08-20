@@ -10,7 +10,7 @@ export async function  GET(req, res) {
       return new Response( JSON.stringify({ rows }) ,{ status:200 } )
 
   } catch(err) { 
-      return new Response( JSON.stringify({ error: 'DB' }) ,{ status:500 } )
+      return new Response( JSON.stringify({ error: err }) ,{ status:501 } )
   }
 
 }
