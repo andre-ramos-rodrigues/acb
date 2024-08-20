@@ -5,6 +5,7 @@ import React from 'react'
 const TestCon = () => {
 
     const test = async() => {
+      console.log(process.env.NEXT_PUBLIC_BASE_URL)
 
         try {  
           const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getcandidatos`, {
