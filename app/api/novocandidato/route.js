@@ -11,7 +11,7 @@ export async function GET(req, res) {
         return new Response( JSON.stringify({ rows }) ,{ status:200 } )
 
     } catch(err) { 
-        return new Response( JSON.stringify({ error: 'DB' }) ,{ status:500 } )
+        return new Response( JSON.stringify({ error: err }) ,{ status:500 } )
     }
 
   }
@@ -67,7 +67,7 @@ export async function POST(req, res) {
         return new Response( JSON.stringify(rows) ,{ status:200 } )
    } catch(err) {
     console.log(err)
-    return new Response( JSON.stringify({ message: "error db" }) ,{ status:400 } )
+    return new Response( JSON.stringify({ message: err }) ,{ status:400 } )
    }
 
    //return new Response( JSON.stringify({ message: 'GET request received' }) ,{ status:200 } )
