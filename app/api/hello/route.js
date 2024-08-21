@@ -1,3 +1,5 @@
+import query from "@/app/db/verceldb"
+
 export async function  GET(req, res) {
   // Handle GET request here
   console.log('trying hello endpoint!')
