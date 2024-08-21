@@ -7,6 +7,10 @@ const TestCon = () => {
     const test = async() => {
       console.log(process.env.NEXT_PUBLIC_BASE_URL)
 
+      console.log(process.env.NEXT_PUBLIC_POSTGRES_DATABASE)
+
+      console.log(process.env.NEXT_PUBLIC_POSTGRES_HOST)
+
         try {  
           const response = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getcandidatos`, {
             method: 'GET'
