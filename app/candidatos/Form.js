@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 const Form = () => {
 const [formData, setFormData] = useState({
 nome: "",idade: "",bairro: "", profissao: "", jafez: "", telefone: "", email: "", 
-comosoube: "", pronome: ""
+comosoube: "", pronome: "", atendimento: ""
 });
 const [err,setErr] = useState({
   msg: "", isOn: false
@@ -36,12 +36,12 @@ const [succ,setSucc] = useState({
     return response.data*/
     // http://localhost:3000/api/novocandidato
 
-    if(formData.nome === '' || formData.telefone === '' || formData.email === ''){
+    if(formData.nome === '' || formData.telefone === '' || formData.email === '' || formData.atendimento === '' || formData.jafez === '' || formData.idade === ''){
       console.log('preencha os dados obrigatórios')
 
       setErr({
         isOn: true,
-        msg: "Os seguintes campos são obrigatórios: nome, telefone e email"
+        msg: "Os seguintes campos são obrigatórios: nome, telefone, email, idade, preferência de atendimento e se já fez terapia anteriormente"
       })
 
       return
@@ -103,7 +103,7 @@ const [succ,setSucc] = useState({
             </div>
 
             <div className='flex justify-between gap-5'>
-            <label htmlFor="idade"> Idade </label> 
+            <label htmlFor="idade"> Idade* </label> 
             <input className='text-black' value={formData.idade} onChange={handleChange} type="text" id="idade" name="idade"></input>
             </div>
 
@@ -129,7 +129,7 @@ const [succ,setSucc] = useState({
 
             
             <div className='flex gap-5'>
-            <label htmlFor="jafez"> Já fez terapia anteriormente? </label> 
+            <label htmlFor="jafez"> Já fez terapia anteriormente?* </label> 
             <input value="sim" onChange={handleChange} type="radio" id="sim" name="jafez" />
             <label htmlFor="sim">Sim</label><br></br>
             <input value="nao" onChange={handleChange} type="radio" id="nao" name="jafez" />
@@ -151,7 +151,7 @@ const [succ,setSucc] = useState({
             </div>
 
             <div className='flex gap-5'>
-            <label htmlFor="atendimento"> Preferência de atendimento </label> 
+            <label htmlFor="atendimento"> Preferência de atendimento* </label> 
             <input value="Online" onChange={handleChange} type="radio" id="Online" name="atendimento" />
             <label htmlFor="Online">Online</label><br></br>    
             <input value="Tijuca" onChange={handleChange} type="radio" id="Tijuca" name="atendimento" />

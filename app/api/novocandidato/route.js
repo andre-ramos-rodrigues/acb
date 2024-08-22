@@ -72,7 +72,7 @@ export async function POST(req, res) {
           const info = await transporter.sendMail({
             from: email, // sender address
             to: process.env.RECEIVER_EMAIL, // list of receivers
-            subject: `Novo contato de possível paciente - ${nome}`, // Subject line
+            subject: `SITE - Novo contato - ${nome}`, // Subject line
             // nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento
             text: `
             
@@ -87,22 +87,26 @@ export async function POST(req, res) {
             Bairro que mora: ${bairro}
 
             `, // plain text body
-            html: `<b>Nome: ${nome}
-            Pronome: ${pronome}
-            Idade: ${idade}
-            Preferência de atendimento: ${atendimento}
-            Já fez terapia antes: ${jafez}
-            Como soube de você: ${comosoube}
-            Telefone: ${telefone}
-            Email: ${email}
-            Bairro que mora: ${bairro}</b>`, // html body
+            html: `
+            <div>
+            <p>Nome: <b>${nome}</b> </p>
+            <p>Pronome: ${pronome} </p>
+            <p>Idade: ${idade} </p>
+            <p>Preferência de atendimento: ${atendimento} </p>
+            <p>Já fez terapia antes: ${jafez} </p>
+            <p>Como soube de você: ${comosoube} </p>
+            <p>Telefone: ${telefone} </p>
+            <p>Email: ${email} </p>
+            <p>Bairro que mora: ${bairro} </p>
+            </div>`, // html body
           });
 
           console.log('Email enviado: ', info.messageId)
 
         const created = await query(createTableQuery)
         created && console.log("table created")
-        //const result = await query(insertQuery, [nome, endereco, bairro, cpf, sexo, nascimento, nomeresponsavel, cpfresponsavel, parentesco, escolaridade, profissional]);
+        // ignorar const result = await query(insertQuery, [nome, endereco, bairro, cpf, sexo, nascimento, nomeresponsavel, cpfresponsavel, parentesco, escolaridade, profissional]);
+        
         const result = await query(insertQuery, values);
         result && console.log('inserted data')  
         const {rows} = await query(getCandidatos)
