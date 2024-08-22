@@ -7,7 +7,7 @@ export async function POST(req, res) {
 
     const alterQuery = `
     ALTER TABLE candidatos
-    ADD COLUMN atendimento VARCHAR(30)
+    ADD COLUMN horario VARCHAR(30)
     `
     const alterQueryAno = `
     ALTER TABLE alunos

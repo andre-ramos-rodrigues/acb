@@ -37,21 +37,22 @@ export async function POST(req, res) {
                 comosoube VARCHAR(300),
                 pronome VARCHAR(100),
                 atendimento VARCHAR(300),
+                horario VARCHAR(300),
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         `;
-    const { nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento} = data;
+    const { nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento, horario} = data;
     
     /*const insertQuery = `
                 INSERT INTO Candidatos (nome, endereco, bairro, cpf, sexo, nascimento, nomeresponsavel, cpfresponsavel, parentesco, escolaridade, profissional)
                 VALUES (${nome}, ${endereco}, ${bairro}, ${cpf}, ${sexo}, ${nascimento}, ${nomeresponsavel}, ${cpfresponsavel}, ${parentesco}, ${escolaridade}, ${profissional})
             `;*/
             
-            const values = [nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento];
+            const values = [nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento, horario];
             //const values = ['Fabio', 'rua X', 'Copacabana', '123', 'masculino', '11/11/2011', 'Maicon', '1234', 'pai', 'nenhuma', 'profissional autonomo'];
             const insertQuery = `
-            INSERT INTO Candidatos (nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento)
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)
+            INSERT INTO Candidatos (nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento, horario)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
             `;
             const getCandidatos = `
             SELECT * FROM candidatos WHERE email = '${email}';
@@ -77,27 +78,26 @@ export async function POST(req, res) {
             text: `
             
             Nome: ${nome}
-            Pronome: ${pronome}
             Idade: ${idade}
             Preferência de atendimento: ${atendimento}
             Já fez terapia antes: ${jafez}
             Como soube de você: ${comosoube}
             Telefone: ${telefone}
             Email: ${email}
-            Bairro que mora: ${bairro}
+            Bairro em que mora: ${bairro}
 
             `, // plain text body
             html: `
             <div>
             <p>Nome: <b>${nome}</b> </p>
-            <p>Pronome: ${pronome} </p>
-            <p>Idade: ${idade} </p>
-            <p>Preferência de atendimento: ${atendimento} </p>
-            <p>Já fez terapia antes: ${jafez} </p>
-            <p>Como soube de você: ${comosoube} </p>
-            <p>Telefone: ${telefone} </p>
-            <p>Email: ${email} </p>
-            <p>Bairro que mora: ${bairro} </p>
+            <p>Idade: <b>${idade}</b> </p>
+            <p>Preferência de atendimento: <b>${atendimento}</b> </p>
+            <p>Já fez terapia antes: <b>${jafez}</b> </p>
+            <p>Como soube de você: <b>${comosoube}</b> </p>
+            <p>Telefone: <b>${telefone}</b> </p>
+            <p>Email: <b>${email}</b> </p>
+            <p>Bairro em que mora: <b>${bairro}</b> </p>
+            <p>Preferência de horário: <b>${horario}</b> </p>
             </div>`, // html body
           });
 

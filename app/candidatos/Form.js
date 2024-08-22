@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 const Form = () => {
 const [formData, setFormData] = useState({
 nome: "",idade: "",bairro: "", profissao: "", jafez: "", telefone: "", email: "", 
-comosoube: "", pronome: "", atendimento: ""
+comosoube: "", pronome: "", atendimento: "", horário: ""
 });
 const [err,setErr] = useState({
   msg: "", isOn: false
@@ -36,12 +36,12 @@ const [succ,setSucc] = useState({
     return response.data*/
     // http://localhost:3000/api/novocandidato
 
-    if(formData.nome === '' || formData.telefone === '' || formData.email === '' || formData.atendimento === '' || formData.jafez === '' || formData.idade === ''){
+    if(formData.nome === '' || formData.telefone === '' || formData.email === '' || formData.atendimento === '' || formData.jafez === '' || formData.idade === '' || formData.horario === ''){
       console.log('preencha os dados obrigatórios')
 
       setErr({
         isOn: true,
-        msg: "Os seguintes campos são obrigatórios: nome, telefone, email, idade, preferência de atendimento e se já fez terapia anteriormente"
+        msg: "Os seguintes campos são obrigatórios: nome, telefone, email, idade, preferência de atendimento (horário e local) e se já fez terapia anteriormente"
       })
 
       return
@@ -65,7 +65,8 @@ const [succ,setSucc] = useState({
           email: formData.email,
           comosoube: formData.comosoube,
           pronome: formData.pronome,
-          atendimento: formData.atendimento
+          atendimento: formData.atendimento,
+          horario: formData.horario
         }), // Convert data to JSON format
     });
 
@@ -97,10 +98,12 @@ const [succ,setSucc] = useState({
             <input className='text-black' value={formData.nome} onChange={handleChange} type="text" id="nome" name="nome"></input>
             </div>
 
+            {/*
             <div className='flex justify-between gap-5'>
             <label htmlFor="pronome"> Pronome </label> 
             <input className='text-black' value={formData.pronome} onChange={handleChange} type="text" id="pronome" name="pronome"></input>
             </div>
+            */}
 
             <div className='flex justify-between gap-5'>
             <label htmlFor="idade"> Idade* </label> 
@@ -151,13 +154,23 @@ const [succ,setSucc] = useState({
             </div>
 
             <div className='flex gap-5'>
-            <label htmlFor="atendimento"> Preferência de atendimento* </label> 
+            <label htmlFor="atendimento"> Preferência de local atendimento* </label> 
             <input value="Online" onChange={handleChange} type="radio" id="Online" name="atendimento" />
             <label htmlFor="Online">Online</label><br></br>    
             <input value="Tijuca" onChange={handleChange} type="radio" id="Tijuca" name="atendimento" />
             <label htmlFor="Tijuca">Tijuca - presencial</label><br></br>
             <input value="Botafogo" onChange={handleChange} type="radio" id="Botafogo" name="atendimento"/>
             <label htmlFor="Botafogo">Botafogo - presencial</label><br></br>   
+            </div>
+
+            <div className='flex gap-5'>
+            <label htmlFor="horario"> Preferência de horário de atendimento* </label> 
+            <input value="manha" onChange={handleChange} type="radio" id="manha" name="horario" />
+            <label htmlFor="manha">Manhã</label><br></br>    
+            <input value="tarde" onChange={handleChange} type="radio" id="tarde" name="horario" />
+            <label htmlFor="tarde">Tarde</label><br></br>
+            <input value="noite" onChange={handleChange} type="radio" id="noite" name="horario"/>
+            <label htmlFor="noite">Noite</label><br></br>   
             </div>
 
             {/*<div className='p-2 bg-blue-300 cursor-pointer rounded-md font-semibold' onClick={() => handleSubmit()}>Salvar</div>*/}
