@@ -1,4 +1,5 @@
 import query from "@/app/db/verceldb"
+import nodemailer from "nodemailer"
 
 export async function GET(req, res) {
     // Handle GET request here
@@ -57,6 +58,48 @@ export async function POST(req, res) {
             `
 
    try {
+
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST,
+            port: process.env.SMTP_PORT,
+            secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+            auth: {
+              user: process.env.SMTP_USER,
+              pass: process.env.SMTP_PASS,
+            },
+          });
+
+          const info = await transporter.sendMail({
+            from: email, // sender address
+            to: process.env.RECEIVER_EMAIL, // list of receivers
+            subject: `Novo contato de possível paciente - ${nome}`, // Subject line
+            // nome, idade, bairro, email, jafez, telefone, comosoube, pronome, atendimento
+            text: `
+            
+            Nome: ${nome}
+            Pronome: ${pronome}
+            Idade: ${idade}
+            Preferência de atendimento: ${atendimento}
+            Já fez terapia antes: ${jafez}
+            Como soube de você: ${comosoube}
+            Telefone: ${telefone}
+            Email: ${email}
+            Bairro que mora: ${bairro}
+
+            `, // plain text body
+            html: `<b>Nome: ${nome}
+            Pronome: ${pronome}
+            Idade: ${idade}
+            Preferência de atendimento: ${atendimento}
+            Já fez terapia antes: ${jafez}
+            Como soube de você: ${comosoube}
+            Telefone: ${telefone}
+            Email: ${email}
+            Bairro que mora: ${bairro}</b>`, // html body
+          });
+
+          console.log('Email enviado: ', info.messageId)
+
         const created = await query(createTableQuery)
         created && console.log("table created")
         //const result = await query(insertQuery, [nome, endereco, bairro, cpf, sexo, nascimento, nomeresponsavel, cpfresponsavel, parentesco, escolaridade, profissional]);
