@@ -104,12 +104,12 @@ const [succ,setSucc] = useState({
 
             <div className='flex justify-between gap-5'>
             <label htmlFor="idade"> Idade* </label> 
-            <input className='text-black' value={formData.idade} onChange={handleChange} type="text" id="idade" name="idade"></input>
+            <input className='text-black' value={formData.idade} onChange={handleChange} type="number" id="idade" name="idade"></input>
             </div>
 
             <div className='flex justify-between gap-5'>
             <label htmlFor="telefone"> Telefone de contato / whatsapp* </label> 
-            <input className='text-black' value={formData.telefone} onChange={handleChange} type="text" id="telefone" name="telefone"></input>
+            <input className='text-black' value={formData.telefone} onChange={handleChange} type="text" id="telefone" name="telefone" maxLength="13"></input>
             </div>
 
             <div className='flex justify-between gap-5'>
