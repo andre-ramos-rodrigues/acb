@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
               <div className="flex flex-row justify-center gap-5 text-center content-center items-center">
                 {/* <Link href="/candidatos" className="bg-gray-700 font-roboto font-light text-gray-200 px-6 py-2 rounded-xl">Agende sua sessão</Link> */}
 
-                <Link href="/"><GrInstagram className="text-neutral-700 font-light hover:text-green-600"/></Link>
+                <Link href='https://www.instagram.com/anabertholasce.psi?igsh=eHBveTFsYnlocmZj' target="_blank"><GrInstagram className="text-neutral-700 font-light hover:text-green-600"/></Link>
                 <Link href="/"><GrLinkedin className="text-neutral-700 font-light hover:text-green-600"/></Link>
 
               </div>

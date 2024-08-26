@@ -4,7 +4,7 @@ import React from 'react'
 
 const Bottom = () => {
   return (
-    <div className=' bg-teal-700 w-[100%] min-h-[300px] p-7 text-neutral-300 flex justify-center align-center items-center'>
+    <div className=' bg-teal-700 w-[100%] min-h-[300px] p-7 text-neutral-200 flex justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
      <p className='text-[22px] font-bold'>Ressignificar a dor abre espaço para vislumbrar aquilo que se deseja na vida</p> 

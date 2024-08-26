@@ -11,8 +11,8 @@ const page = () => {
             <p className='font-bold text-xl'>Olá</p>
             <p className=''>Pode me contactar via WhatsApp,</p>
             <p className=''>mas se preferir pode preencher o formulário abaixo e eu entro em contato</p>
-            <Link className='font-bold text-lg' href='https://www.instagram.com/anabertholasce.psi?igsh=eHBveTFsYnlocmZj' target="_blank">Instagram</Link>
-            <div className='font-bold text-lg'>Whatsapp:   21 2255-6677</div>
+            {/* <Link className='font-bold text-lg' href='https://www.instagram.com/anabertholasce.psi?igsh=eHBveTFsYnlocmZj' target="_blank">Instagram</Link> */}
+            <div className='font-bold text-lg mt-3'>Whatsapp:   21 2255-6677</div>
           </div>
           <Form />
       </div>

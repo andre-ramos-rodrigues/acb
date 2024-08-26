@@ -92,46 +92,46 @@ const [succ,setSucc] = useState({
 
   return (
     <main className='items-center'>
-        <form onSubmit={handleSubmit} action='' method='post' className='flex flex-col gap-7 bg-neutral-500 text-neutral-100 p-6 rounded-md items-center my-5 mx-7'>
-            <div className='flex justify-between gap-5'>
+        <form onSubmit={handleSubmit} action='' method='post' className='flex flex-col gap-7 bg-neutral-500 text-neutral-200 p-6 rounded-md items-center my-5 mx-7'>
+            <div className='flex justify-between gap-5 items-center'>
             <label htmlFor="nome"> Nome* </label> 
-            <input className='text-black' value={formData.nome} onChange={handleChange} type="text" id="nome" name="nome"></input>
+            <input className='text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.nome} onChange={handleChange} type="text" id="nome" name="nome"></input>
             </div>
 
             {/*
-            <div className='flex justify-between gap-5'>
+            <div className='flex justify-between gap-5 items-center'>
             <label htmlFor="pronome"> Pronome </label> 
-            <input className='text-black' value={formData.pronome} onChange={handleChange} type="text" id="pronome" name="pronome"></input>
+            <input className=' text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.pronome} onChange={handleChange} type="text" id="pronome" name="pronome"></input>
             </div>
             */}
 
-            <div className='flex justify-between gap-5'>
+            <div className='flex justify-between gap-5 items-center'>
             <label htmlFor="idade"> Idade* </label> 
-            <input className='text-black' value={formData.idade} onChange={handleChange} type="number" id="idade" name="idade"></input>
+            <input className=' text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.idade} onChange={handleChange} type="number" id="idade" name="idade"></input>
             </div>
 
-            <div className='flex justify-between gap-5'>
+            <div className='flex justify-between gap-5 items-center'>
             <label htmlFor="telefone"> Telefone de contato / whatsapp* </label> 
-            <input className='text-black' value={formData.telefone} onChange={handleChange} type="text" id="telefone" name="telefone" maxLength="13"></input>
+            <input className=' text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.telefone} onChange={handleChange} type="text" id="telefone" name="telefone" maxLength="13"></input>
             </div>
 
-            <div className='flex justify-between gap-5'>
+            <div className='flex justify-between gap-5 items-center'>
             <label htmlFor="email"> Email* </label> 
-            <input className='text-black' value={formData.email} onChange={handleChange} type="text" id="email" name="email"></input>
+            <input className=' text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.email} onChange={handleChange} type="text" id="email" name="email"></input>
             </div>
 
-            <div className='flex gap-5'>
+            <div className='flex gap-5 items-center'>
             <label htmlFor="bairro"> Bairro </label> 
-            <input className='text-black' value={formData.bairro} onChange={handleChange} type="text" id="bairro" name="bairro"></input>
+            <input className=' text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.bairro} onChange={handleChange} type="text" id="bairro" name="bairro"></input>
             </div>
 
-            <div className='flex gap-5'>
+            <div className='flex gap-5 items-center'>
             <label htmlFor="profissao"> Profissão </label> 
-            <input className='text-black' value={formData.profissao} onChange={handleChange} type="text" id="profissao" name="profissao"></input>
+            <input className=' text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.profissao} onChange={handleChange} type="text" id="profissao" name="profissao"></input>
             </div>
 
             
-            <div className='flex gap-5'>
+            <div className='flex gap-5 items-center'>
             <label htmlFor="jafez"> Já fez terapia anteriormente?* </label> 
             <input value="sim" onChange={handleChange} type="radio" id="sim" name="jafez" />
             <label htmlFor="sim">Sim</label><br></br>
@@ -139,7 +139,7 @@ const [succ,setSucc] = useState({
             <label htmlFor="nao">Não</label><br></br>
             </div>
             
-            <div className='flex gap-5'>
+            <div className='flex gap-5 items-center'>
             <label htmlFor="comosoube"> Como me achou ?</label> 
             <input value="google" onChange={handleChange} type="radio" id="google" name="comosoube" />
             <label htmlFor="google">Google</label><br></br>
@@ -153,7 +153,7 @@ const [succ,setSucc] = useState({
             <label htmlFor="outro">Outro</label><br></br>            
             </div>
 
-            <div className='flex gap-5'>
+            <div className='flex gap-5 items-center'>
             <label htmlFor="atendimento"> Preferência de local atendimento* </label> 
             <input value="Online" onChange={handleChange} type="radio" id="Online" name="atendimento" />
             <label htmlFor="Online">Online</label><br></br>    
@@ -163,7 +163,7 @@ const [succ,setSucc] = useState({
             <label htmlFor="Botafogo">Botafogo - presencial</label><br></br>   
             </div>
 
-            <div className='flex gap-5'>
+            <div className='flex gap-5 items-center'>
             <label htmlFor="horario"> Preferência de horário de atendimento* </label> 
             <input value="manha" onChange={handleChange} type="radio" id="manha" name="horario" />
             <label htmlFor="manha">Manhã</label><br></br>    
