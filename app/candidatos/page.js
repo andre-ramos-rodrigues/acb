@@ -9,7 +9,7 @@ const page = () => {
       <div className="flex flex-col gap-5 text-neutral-700 font-light font-roboto">
           <div className='w-[100wh] p-7 flex flex-col items-center'>
             <p className='font-bold text-xl'>Olá</p>
-            <p className=''>Pode me contactar via direct ou WhatsApp,</p>
+            <p className=''>Pode me contactar via WhatsApp,</p>
             <p className=''>mas se preferir pode preencher o formulário abaixo e eu entro em contato</p>
             <Link className='font-bold text-lg' href='https://www.instagram.com/anabertholasce.psi?igsh=eHBveTFsYnlocmZj' target="_blank">Instagram</Link>
             <div className='font-bold text-lg'>Whatsapp:   21 2255-6677</div>

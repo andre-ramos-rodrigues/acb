@@ -33,11 +33,11 @@ export default function RootLayout({ children }) {
               {/* <Link href="/" className="text-neutral-700 text-[45px] ">ACB</Link> */}
              
   
-              <Link href="/" className="text-neutral-700 font-light ">Home</Link>
-              <Link href="/" className="text-neutral-700 font-light ">A Psicanálise</Link>
-              <Link href="/" className="text-neutral-700 font-light ">Blog</Link>
-              <Link href="/" className="text-neutral-700 font-light ">Dúvidas Frequentes</Link>
-              <Link href="/candidatos" className=" text-neutral-700 rounded-xl font-semibold">Agende sua sessão</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">Home</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">A Psicanálise</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">Blog</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">Dúvidas Frequentes</Link>
+              <Link href="/candidatos" className=" text-neutral-700 rounded-xl font-semibold hover:text-green-600">Agende sua sessão</Link>
 
               {/* <TestCon /> */}
            
@@ -45,15 +45,15 @@ export default function RootLayout({ children }) {
               <div className="flex flex-row justify-center gap-5 text-center content-center items-center">
                 {/* <Link href="/candidatos" className="bg-gray-700 font-roboto font-light text-gray-200 px-6 py-2 rounded-xl">Agende sua sessão</Link> */}
 
-                <Link href="/"><GrInstagram className="text-neutral-700 font-light "/></Link>
-                <Link href="/"><GrLinkedin className="text-neutral-700 font-light "/></Link>
+                <Link href="/"><GrInstagram className="text-neutral-700 font-light hover:text-green-600"/></Link>
+                <Link href="/"><GrLinkedin className="text-neutral-700 font-light hover:text-green-600"/></Link>
 
               </div>
                 
             </div>
           </div>
            {/* HEADER */}
-          <div className="">{children}</div>
+          <div className="mt-[120px]">{children}</div>
         </div>
       </body>      
     </html>

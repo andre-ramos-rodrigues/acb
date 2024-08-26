@@ -174,7 +174,7 @@ const [succ,setSucc] = useState({
             </div>
 
             {/*<div className='p-2 bg-blue-300 cursor-pointer rounded-md font-semibold' onClick={() => handleSubmit()}>Salvar</div>*/}
-            <button className='p-2 bg-neutral-200 text-neutral-700 font-semibold font-roboto cursor-pointer rounded-md ' type="submit">Enviar</button>
+            <button className='p-2 bg-neutral-200 text-neutral-700 hover:text-green-600 font-semibold font-roboto cursor-pointer rounded-md ' type="submit">Enviar</button>
 
         </form>
           {

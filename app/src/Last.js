@@ -6,11 +6,11 @@ const Last = () => {
   return (
     <div className=' bg-neutral-200 w-[100%] min-h-[300px] p-7 text-neutral-700 font-light flex justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
-     <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
-     <p className='text-[22px] font-bold'>Atendimentos Presenciais e Online</p> 
+     <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center gap-3'>
+     <p className='text-[22px] font-bold'>Atendimento Presencial e Online</p> 
      <div className='flex flex-row justify-center align-center items-center gap-3'><ImLocation /><p className='text-[16px] '>Botafogo - Voluntários da Pátria</p></div>
      <div className='flex flex-row justify-center align-center items-center gap-3'><ImLocation /><p className='text-[16px] '> Tijuca - Saens Peña</p></div>
-     <Link href="/candidatos" className='mt-2 text-[16px]'>AGENDA UMA SESSÃO</Link>
+     <Link href="/candidatos" className='mt-2 text-[16px] font-semibold hover:text-green-600'>Agende uma sessão</Link>
      </div>
      <div>
       {/* 
