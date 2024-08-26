@@ -78,7 +78,7 @@ const [succ,setSucc] = useState({
             })
             const responseData = await response.json();
             console.log(responseData);
-            router.push('/', { scroll: false })
+            //router.push('/', { scroll: false })
 
         } else {
             // Handle errors
@@ -172,7 +172,6 @@ const [succ,setSucc] = useState({
             <input value="noite" onChange={handleChange} type="radio" id="noite" name="horario"/>
             <label htmlFor="noite">Noite</label><br></br>   
             </div>
-
             {/*<div className='p-2 bg-blue-300 cursor-pointer rounded-md font-semibold' onClick={() => handleSubmit()}>Salvar</div>*/}
             <button className='p-2 bg-neutral-200 text-neutral-700 hover:text-green-600 font-semibold font-roboto cursor-pointer rounded-md ' type="submit">Enviar</button>
 
