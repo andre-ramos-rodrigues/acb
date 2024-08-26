@@ -33,10 +33,10 @@ export default function RootLayout({ children }) {
               {/* <Link href="/" className="text-neutral-700 text-[45px] ">ACB</Link> */}
              
   
-              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">Home</Link>
-              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">A Psicanálise</Link>
-              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">Blog</Link>
-              <Link href="/" className="text-neutral-700 font-light hover:font-semibold">Dúvidas Frequentes</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">Home</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">A Psicanálise</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">Blog</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">Dúvidas Frequentes</Link>
               <Link href="/candidatos" className=" text-neutral-700 rounded-xl font-semibold hover:text-green-600">Agende sua sessão</Link>
 
               {/* <TestCon /> */}

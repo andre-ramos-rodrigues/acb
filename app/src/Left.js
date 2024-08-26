@@ -6,7 +6,7 @@ const Left = () => {
     <main className="bg-neutral-300 text-neutral-700 font-light w-[100%] min-h-[300px] flex flex-col justify-center gap-7 items-center align-center py-4">
            <div className='text-center text-[22px] font-semibold'>Quem sou eu?</div>
           <div className='flex flex-row gap-7'>
-          <div className='rounded-xs px-4  pb-[60px] bg-neutral-200 shadow-sm'>
+          <div className='rounded-xs px-4 py-2 pb-[60px] bg-neutral-200 shadow-sm'>
           <Image
               src="/user.png"
               alt="Logo"
@@ -18,7 +18,8 @@ const Left = () => {
             </div>
               <div className='rounded-xs px-4  pb-[60px] bg-neutral-200 shadow-sm min-w-[180px] min-h-[180px]'>
               <p>Meu nome é <span className='font-semibold'>Ana Clara</span></p>
-              <p>Sou formada em Piscicologia pela Universidade Veiga de Almeida.</p>
+              <p>Formada em Piscicologia pela Universidade Veiga de Almeida</p>
+              <p>Pós-graduada em Psicanálise pela PUC</p>
             </div>
             </div>
         {/* <div className="bg-neutral-400 rounded-full w-[360px] h-[360px] mt-[-120px]"></div> */}

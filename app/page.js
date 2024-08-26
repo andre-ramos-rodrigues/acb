@@ -4,6 +4,7 @@ import Right from "./src/Right";
 import Left from "./src/Left";
 import Bottom from "./src/Bottom";
 import Last from "./src/Last";
+import Psicanalise from "./src/Psicanalise";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
     <Right />
     <Left />
     <Bottom />
+    <Psicanalise />
     <Last />
     </div>
     </main>
