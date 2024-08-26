@@ -10,10 +10,13 @@ export default function Home() {
 
     <main className="w-[100%]">
     <div className="w-[100%] flex flex-col items-center justify-center">
-    <div className="flex flex-row w-[100%] min-h-[400px] bg-neutral-200">
+    {/* <div className="flex flex-row w-[100%] min-h-[400px] bg-neutral-200">
       <Left />
       <Right />
     </div>
+    */}
+    <Right />
+    <Left />
     <Bottom />
     <Last />
     </div>

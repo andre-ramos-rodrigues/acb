@@ -3,15 +3,24 @@ import Image from "next/image";
 
 const Left = () => {
   return (
-    <main className="bg-neutral-200 w-[100%] min-h-[100%] text-white flex flex-row justify-center items-center align-center">
+    <main className="bg-neutral-300 text-neutral-700 font-light w-[100%] min-h-[300px] flex flex-col justify-center gap-7 items-center align-center py-4">
+           <div className='text-center text-[22px] font-semibold'>Quem sou eu?</div>
+          <div className='flex flex-row gap-7'>
+          <div className='rounded-xs px-4  pb-[60px] bg-neutral-200 shadow-sm'>
           <Image
               src="/user.png"
               alt="Logo"
-              className="bg-neutral-200 rounded-full aspect-square object-cover self-center "
-              width={270}
-              height={270}
+              className="bg-neutral-700 rounded-sm aspect-square object-cover self-center "
+              width={180}
+              height={180}
               priority
             />
+            </div>
+              <div className='rounded-xs px-4  pb-[60px] bg-neutral-200 shadow-sm min-w-[180px] min-h-[180px]'>
+              <p>Meu nome é <span className='font-semibold'>Ana Clara</span></p>
+              <p>Sou formada em Piscicologia pela Universidade Veiga de Almeida.</p>
+            </div>
+            </div>
         {/* <div className="bg-neutral-400 rounded-full w-[360px] h-[360px] mt-[-120px]"></div> */}
         {/*
         <div className='bg-neutral-300 text-neutral-700 font-light rounded-full w-[360px] h-[360px] ml-[-120px] mb-[-120px] flex flex-col align-center justify-center items-center'>

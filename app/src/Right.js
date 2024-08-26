@@ -3,13 +3,13 @@ import Image from "next/image";
 
 const Right = () => {
   return (
-    <main className="bg-neutral-200 w-[100%] min-h-[100%] text-white flex flex-row justify-center items-center align-center">
+    <main className="bg-neutral-200 w-[100%] min-h-[300px] text-white flex flex-row justify-center items-center align-center">
           <Image
               src="/acb.png"
               alt="Logo"
               className="bg-neutral-200 rounded-full aspect-square object-cover self-center "
-              width={360}
-              height={360}
+              width={300}
+              height={300}
               priority
             />
         {/* <div className="bg-neutral-400 rounded-full w-[360px] h-[360px] mt-[-120px]"></div> */}
