@@ -92,7 +92,7 @@ const [succ,setSucc] = useState({
 
   return (
     <main className='items-center'>
-        <form onSubmit={handleSubmit} action='' method='post' className='flex flex-col gap-7 bg-gray-600 text-white p-6 rounded-md items-center my-5 mx-7'>
+        <form onSubmit={handleSubmit} action='' method='post' className='flex flex-col gap-7 bg-neutral-500 text-neutral-100 p-6 rounded-md items-center my-5 mx-7'>
             <div className='flex justify-between gap-5'>
             <label htmlFor="nome"> Nome* </label> 
             <input className='text-black' value={formData.nome} onChange={handleChange} type="text" id="nome" name="nome"></input>
@@ -174,7 +174,7 @@ const [succ,setSucc] = useState({
             </div>
 
             {/*<div className='p-2 bg-blue-300 cursor-pointer rounded-md font-semibold' onClick={() => handleSubmit()}>Salvar</div>*/}
-            <button className='p-2 bg-neutral-300 text-neutral-700 font-semibold font-roboto cursor-pointer rounded-md ' type="submit">Enviar</button>
+            <button className='p-2 bg-neutral-200 text-neutral-700 font-semibold font-roboto cursor-pointer rounded-md ' type="submit">Enviar</button>
 
         </form>
           {
