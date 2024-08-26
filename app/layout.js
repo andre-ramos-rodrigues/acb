@@ -27,7 +27,8 @@ export default function RootLayout({ children }) {
       <body className={`${dm.variable} font-sans`}>
         <div className="flex flex-col justify-between ">
           {/* HEADER */}
-          <div className="bg-neutral-300 content-center items-center">
+          <div className="bg-neutral-300 content-center items-center fixed 
+                w-full top-0 left-0">
             <div className="mx-[220px] flex flex-row justify-center gap-5 h-[120px] text-center content-center items-center">
               {/* <Link href="/" className="text-neutral-700 text-[45px] ">ACB</Link> */}
              
