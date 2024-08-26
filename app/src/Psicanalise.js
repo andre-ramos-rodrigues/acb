@@ -11,10 +11,11 @@ const Psicanalise = () => {
        <p className='text-[16px] mt-4'>A análise pessoal é uma forma de tratamento que visa isso aquilo outro e mais um negócio que eu tenho que</p>
        <p className='text-[16px] '>construir bem feito para não ficar uma merda e utilizar os conceitos de forma coerente e apropriada para pessoas que não conhecem.</p>
        */} 
-
+        {/* 
         <div className='mt-4 text-[19px] max-w-[70%] font-semibold'>
         Lidar com o mal-estar abre espaço para vislumbrar aquilo que se deseja na vida
         </div>
+        */}
         
         <div className='mt-1 text-[16px] max-w-[70%]'>
         A terapia psicanalítica visa ajudar o sujeito a lidar com seu mal-estar, a partir do encontro com o inconsciente, habilitando-o a fazer escolhas diferentes daquelas que o adoeceram e a favor das que mobilizam seu desejo de viver.
