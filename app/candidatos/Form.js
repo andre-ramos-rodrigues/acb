@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 const Form = () => {
 const [formData, setFormData] = useState({
 nome: "",idade: "",bairro: "", profissao: "", jafez: "", telefone: "", email: "", 
-comosoube: "", pronome: "", atendimento: "", horário: ""
+comosoube: "", pronome: "", atendimento: "", horario: ""
 });
 const [err,setErr] = useState({
   msg: "", isOn: false

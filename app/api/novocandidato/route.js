@@ -79,7 +79,8 @@ export async function POST(req, res) {
             
             Nome: ${nome}
             Idade: ${idade}
-            Preferência de atendimento: ${atendimento}
+            Preferência de local de atendimento: ${atendimento}
+            Preferência de horário de atendimento: ${horario}
             Já fez terapia antes: ${jafez}
             Como soube de você: ${comosoube}
             Telefone: ${telefone}
@@ -91,13 +92,13 @@ export async function POST(req, res) {
             <div>
             <p>Nome: <b>${nome}</b> </p>
             <p>Idade: <b>${idade}</b> </p>
-            <p>Preferência de atendimento: <b>${atendimento}</b> </p>
+            <p>Preferência de local de atendimento: <b>${atendimento}</b> </p>
+            <p>Preferência de horário de atendimento: <b>${horario}</b> </p>
             <p>Já fez terapia antes: <b>${jafez}</b> </p>
             <p>Como soube de você: <b>${comosoube}</b> </p>
             <p>Telefone: <b>${telefone}</b> </p>
             <p>Email: <b>${email}</b> </p>
             <p>Bairro em que mora: <b>${bairro}</b> </p>
-            <p>Preferência de horário: <b>${horario}</b> </p>
             </div>`, // html body
           });
 

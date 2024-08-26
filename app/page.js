@@ -3,17 +3,19 @@ import Link from 'next/link'
 import Right from "./src/Right";
 import Left from "./src/Left";
 import Bottom from "./src/Bottom";
+import Last from "./src/Last";
 
 export default function Home() {
   return (
 
     <main className="w-[100%]">
     <div className="w-[100%] flex flex-col items-center justify-center">
-    <div className="flex flex-row w-[100%] min-h-[600px]">
+    <div className="flex flex-row w-[100%] min-h-[400px]">
       <Left />
       <Right />
     </div>
     <Bottom />
+    <Last />
     </div>
     </main>
 
