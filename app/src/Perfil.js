@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
-const Left = () => {
+const Perfil = () => {
   return (
     <main className="bg-[#dddddd] text-neutral-700 font-light w-[100%] min-h-[300px] flex flex-col justify-center gap-7 items-center align-center py-4">
            <div className='text-center text-[22px] font-semibold'>Quem sou eu?</div>
@@ -34,4 +34,4 @@ const Left = () => {
   )
 }
 
-export default Left
+export default Perfil

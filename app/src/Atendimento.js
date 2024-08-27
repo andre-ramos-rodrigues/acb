@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React from 'react'
 import { ImLocation } from "react-icons/im";
 
-const Last = () => {
+const Atendimento = () => {
   return (
     <div className=' bg-[#dddddd] w-[100%] min-h-[300px] p-7 text-neutral-700 font-light flex justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
@@ -25,4 +25,4 @@ const Last = () => {
   )
 }
 
-export default Last
+export default Atendimento

@@ -8,12 +8,12 @@ const Sinais = () =>  {
        <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
        <p className='text-[22px] font-bold'>O mal-estar pode aparecer de várias formas</p> 
        <div className='flex flex-col place-content-start'>
-       <div className='mt-4 flex flex-row gap-4 items-center'><PiCircleFill className='text-[10px]'/><p className='text-[20px]'>Depressão</p></div>
-       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[10px]' /><p className='text-[20px]'>Ansiedade</p></div>
-       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[10px]' /><p className='text-[20px]'>Fobias/Medos</p></div>
-       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[10px]' /><p className='text-[20px]'>Procrastinação</p></div>
-       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[10px]' /><p className='text-[20px]'>Autocobrança</p></div>
-       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[10px]' /><p className='text-[20px]'>Outros</p></div>
+       <div className='mt-4 flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]'/><p className='text-[18px]'>Depressão</p></div>
+       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]' /><p className='text-[18px]'>Ansiedade</p></div>
+       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]' /><p className='text-[18px]'>Fobias/Medos</p></div>
+       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]' /><p className='text-[18px]'>Procrastinação</p></div>
+       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]' /><p className='text-[18px]'>Autocobrança</p></div>
+       <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]' /><p className='text-[18px]'>Outros</p></div>
        {/* <Link href="/candidatos" className='mt-2 text-[16px]'>AGENDA UMA SESSÃO</Link> */}
        </div>
        </div>

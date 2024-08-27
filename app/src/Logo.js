@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
 
-const Right = () => {
+const Logo = () => {
   return (
     <main className="bg-neutral-200 w-[100%] min-h-[300px] text-white flex flex-row justify-center items-center align-center">
           <Image
@@ -24,4 +24,4 @@ const Right = () => {
   )
 }
 
-export default Right
+export default Logo

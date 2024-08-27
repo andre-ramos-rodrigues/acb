@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from 'next/link'
-import Right from "./src/Right";
-import Left from "./src/Left";
-import Bottom from "./src/Bottom";
-import Last from "./src/Last";
+import Logo from "./src/Logo";
+import Perfil from "./src/Perfil";
+import Frase from "./src/Frase";
+import Atendimento from "./src/Atendimento";
 import Psicanalise from "./src/Psicanalise";
 import Sinais from "./src/Sinais";
 
@@ -17,12 +17,12 @@ export default function Home() {
       <Right />
     </div>
     */}
-    <Right />
-    <Left />
-    <Bottom />
+    <Logo />
+    <Perfil />
+    <Frase />
     <Psicanalise />
     <Sinais />
-    <Last />
+    <Atendimento />
     </div>
     </main>
 
