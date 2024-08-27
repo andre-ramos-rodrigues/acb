@@ -3,7 +3,7 @@ import React from 'react'
 
 const Psicanalise = () => {
     return (
-      <div className=' bg-neutral-300 text-neutral-700 font-light w-[100%] min-h-[300px] p-7  flex justify-center align-center items-center'>
+      <div className=' bg-neutral-200 text-neutral-700 font-light w-[100%] min-h-[300px] p-7  flex justify-center align-center items-center'>
        <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
        <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
        <p className='text-[22px] font-bold'>A Psicanálise</p>

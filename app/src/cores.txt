@@ -1,0 +1,5 @@
+COR 1: #dddddd
+COR 2: #ad6347
+COR 3: #9db2aa
+COR 4: #698b7f
+COR 5: PRETO

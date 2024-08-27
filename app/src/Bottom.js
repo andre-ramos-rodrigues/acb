@@ -4,7 +4,7 @@ import React from 'react'
 
 const Bottom = () => {
   return (
-    <div className=' bg-teal-600 w-[100%] min-h-[300px] p-7 text-neutral-200 flex justify-center align-center items-center'>
+    <div className=' bg-[#698b7f] w-[100%] min-h-[300px] p-7 text-neutral-200 flex justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
      <p className='text-[22px] font-bold'>Lidar com o mal-estar abre espaço para vislumbrar aquilo que se deseja na vida</p> 

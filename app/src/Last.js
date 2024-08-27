@@ -4,7 +4,7 @@ import { ImLocation } from "react-icons/im";
 
 const Last = () => {
   return (
-    <div className=' bg-neutral-200 w-[100%] min-h-[300px] p-7 text-neutral-700 font-light flex justify-center align-center items-center'>
+    <div className=' bg-[#dddddd] w-[100%] min-h-[300px] p-7 text-neutral-700 font-light flex justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center gap-3'>
      <p className='text-[22px] font-bold'>Atendimento Presencial e Online</p> 
