@@ -17,11 +17,20 @@ const Psicanalise = () => {
         </div>
         */}
         
-        <div className='mt-1 text-[16px] max-w-[70%]'>
+        <div className='mt-1 text-[18px] max-w-[70%] text-center'>
         A terapia psicanalítica visa ajudar o sujeito a lidar com seu mal-estar, a partir do encontro com o inconsciente, habilitando-o a fazer escolhas diferentes daquelas que o adoeceram e a favor das que mobilizam seu desejo de viver.
         </div>
+        <div className='text-[16px] max-w-[70%] text-center mt-3'>
+        A psicanálise entende que estar e se movimentar no mundo em que vivemos é desconfortável, portanto eliminar o mal-estar de viver também seria retirar as possibilidades de satisfação e prazer que encontramos na vida. Entender e aprender a se relacionar com as singularidades de seu próprio desconforto possibilita colocar em movimento o que cada um constrói como felicidade.
+        </div>
+        <div className='mt-1 text-[16px] max-w-[70%] text-center'>
+        O tratamento em análise é feito a partir da associação livre, técnica criada por Sigmund Freud que implica que o paciente fale o lhe vem à mente, respeitando o próprio fluxo de seus pensamentos. A atenção flutuante e a análise do discurso também são técnicas utilizadas durante a sessão pelo analista.
+        </div>
+        <div className='mt-1 text-[16px] max-w-[70%] text-center'>
+        Clicando em <span className='italic font-semibold'>saiba mais</span> ou em <span className='italic font-semibold'>A Psicanálise</span> você pode explorar temas como o inconsciente, a transferência, a pulsão, os sonhos, a linguagem e a repetição.
+        </div>
 
-       <Link href="/candidatos" className='mt-2 text-[16px] hover:text-green-600 font-semibold'>Saiba mais</Link>
+       <Link href="/candidatos" className='mt-2 text-[16px] hover:text-green-600 font-semibold '>Saiba mais</Link>
        </div>
        <div>
         {/* 
