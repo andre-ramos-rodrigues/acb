@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <main className="bg-neutral-200 w-[100%] min-h-[300px] text-white flex flex-row justify-center items-center align-center">
+    <main className="bg-neutral-200 w-[100%] min-h-[300px] text-white flex justify-center items-center align-center">
           <Image
               src="/acb.png"
               alt="Logo"

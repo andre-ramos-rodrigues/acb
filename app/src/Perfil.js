@@ -20,6 +20,9 @@ const Perfil = () => {
               <p>Meu nome é <span className='font-semibold text-[#ad6347]'>Ana Clara</span></p>
               <p>Formada em Piscicologia pela Universidade Veiga de Almeida</p>
               <p>Pós-graduada em Psicanálise pela PUC</p>
+              <p>Sigo a abordagem Lacaniana</p>
+              <p>Mais frases</p>
+              <p>Mais frases</p>
             </div>
             </div>
         {/* <div className="bg-neutral-400 rounded-full w-[360px] h-[360px] mt-[-120px]"></div> */}

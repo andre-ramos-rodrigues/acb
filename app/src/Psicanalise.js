@@ -21,7 +21,7 @@ const Psicanalise = () => {
         A terapia psicanalítica visa ajudar o sujeito a lidar com seu mal-estar, a partir do encontro com o inconsciente, habilitando-o a fazer escolhas diferentes daquelas que o adoeceram e a favor das que mobilizam seu desejo de viver.
         </div>
 
-       <Link href="/candidatos" className='mt-2 text-[16px] hover:text-green-600'>Saiba mais</Link>
+       <Link href="/candidatos" className='mt-2 text-[16px] hover:text-green-600 font-semibold'>Saiba mais</Link>
        </div>
        <div>
         {/* 
