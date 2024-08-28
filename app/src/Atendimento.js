@@ -3,8 +3,8 @@ import React from 'react'
 import { ImLocation } from "react-icons/im";
 
 const Atendimento = () => {
-  return (
-    <div className=' bg-[#dddddd] w-[100%] min-h-[300px] p-7 text-neutral-700 font-light flex justify-center align-center items-center'>
+  return ( // bg-[#dddddd]
+    <div className=' bg-slate-50 w-[100%] min-h-[200px] p-7 text-neutral-700 font-light flex justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
      <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center gap-3'>
      <p className='text-[22px] font-bold'>Atendimento Presencial e Online</p> 

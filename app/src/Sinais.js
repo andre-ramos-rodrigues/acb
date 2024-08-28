@@ -3,10 +3,10 @@ import { PiCircleFill } from "react-icons/pi";
 
 const Sinais = () =>  {
     return (
-      <div className=' bg-[#698b7f] w-[100%] min-h-[300px] p-7 text-neutral-200 flex justify-center align-center items-center'>
+      <div className=' bg-[#698b7f] w-[100%] min-h-[300px] p-7 text-slate-50 flex justify-center align-center items-center'>
        <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
        <div className='w-[100%] h-[100%] flex flex-col justify-center align-center items-center'>
-       <p className='text-[22px] font-bold'>O mal-estar pode aparecer de várias formas</p> 
+       <p className='text-[22px] font-bold tracking-[.13em]'>O mal-estar pode aparecer de várias formas</p> 
        <div className='flex flex-col place-content-start'>
        <div className='mt-4 flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]'/><p className='text-[18px]'>Depressão</p></div>
        <div className='flex flex-row gap-4 items-center'><PiCircleFill className='text-[8px]' /><p className='text-[18px]'>Ansiedade</p></div>

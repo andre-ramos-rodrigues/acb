@@ -26,23 +26,23 @@ export default function RootLayout({ children }) {
     <html lang="pt-Br">
       <body className={`${dm.variable} font-sans`}>
         <div className="flex flex-col justify-between ">
-          {/* HEADER bg-neutral-300 */} 
-          <div className="bg-[#dddddd] content-center items-center fixed 
+          {/* HEADER bg-neutral-300 bg-[#dddddd] */} 
+          <div className="bg-white content-center items-center fixed 
                 w-full top-0 left-0">
             <div className="mx-[220px] flex flex-row justify-center gap-5 h-[120px] text-center content-center items-center">
               {/* <Link href="/" className="text-neutral-700 text-[45px] ">ACB</Link> */}
              
   
-              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">Home</Link>
-              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">A Psicanálise</Link>
-              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">Blog</Link>
-              <Link href="/" className="text-neutral-700 font-light hover:text-green-600">Dúvidas Frequentes</Link>
-              <Link href="/candidatos" className=" text-neutral-700 rounded-xl font-semibold hover:text-green-600">Agende sua sessão</Link>
+              <Link href="/" className="text-[#ad6347] hover:text-green-600 text-[18px]">Home</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:text-green-600 text-[18px]">A Psicanálise</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:text-green-600 text-[18px]">Blog</Link>
+              <Link href="/" className="text-neutral-700 font-light hover:text-green-600 text-[18px]">Dúvidas Frequentes</Link>
+              <Link href="/candidatos" className=" text-neutral-700 rounded-xl font-semibold hover:text-green-600 text-[18px]">Agende sua sessão</Link>
 
               {/* <TestCon /> */}
            
               
-              <div className="flex flex-row justify-center gap-5 text-center content-center items-center">
+              <div className="flex flex-row justify-center gap-5 text-center content-center items-center ml-[44px]">
                 {/* <Link href="/candidatos" className="bg-gray-700 font-roboto font-light text-gray-200 px-6 py-2 rounded-xl">Agende sua sessão</Link> */}
 
                 <Link href='https://www.instagram.com/anabertholasce.psi?igsh=eHBveTFsYnlocmZj' target="_blank"><GrInstagram className="text-neutral-700 font-light hover:text-green-600"/></Link>

@@ -92,7 +92,7 @@ const [succ,setSucc] = useState({
 
   return (
     <main className='items-center'>
-        <form onSubmit={handleSubmit} action='' method='post' className='flex flex-col gap-7 bg-neutral-500 text-neutral-200 p-6 rounded-md items-center my-5 mx-7'>
+        <form onSubmit={handleSubmit} action='' method='post' className='flex flex-col gap-7 bg-neutral-500 text-neutral-200 p-6 rounded-md items-center my-1 mx-7'>
             <div className='flex justify-between gap-5 items-center'>
             <label htmlFor="nome"> Nome* </label> 
             <input className='text-neutral-700 bg-neutral-200 p-1 rounded-sm' value={formData.nome} onChange={handleChange} type="text" id="nome" name="nome"></input>
